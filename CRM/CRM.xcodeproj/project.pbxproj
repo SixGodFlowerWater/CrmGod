@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A05ED21B6F13EB0005B637 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A05ED11B6F13EB0005B637 /* loginViewController.m */; };
+		04A05ED61B6F14EA0005B637 /* crmSoap.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A05ED51B6F14EA0005B637 /* crmSoap.m */; };
 		E7526E4C1B67504200C6468F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7526E4B1B67504200C6468F /* main.m */; };
 		E7526E4F1B67504200C6468F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7526E4E1B67504200C6468F /* AppDelegate.m */; };
 		E7526E521B67504200C6468F /* CRM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7526E501B67504200C6468F /* CRM.xcdatamodeld */; };
@@ -28,6 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A05ED01B6F13EB0005B637 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		04A05ED11B6F13EB0005B637 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		04A05ED41B6F14EA0005B637 /* crmSoap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crmSoap.h; sourceTree = "<group>"; };
+		04A05ED51B6F14EA0005B637 /* crmSoap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crmSoap.m; sourceTree = "<group>"; };
+		04A05EDC1B6F53490005B637 /* crmDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crmDelegate.h; sourceTree = "<group>"; };
 		E7526E461B67504200C6468F /* CRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7526E4A1B67504200C6468F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7526E4B1B67504200C6468F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,9 +69,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A05ED31B6F13FD0005B637 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04A05ED01B6F13EB0005B637 /* loginViewController.h */,
+				04A05ED11B6F13EB0005B637 /* loginViewController.m */,
+			);
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
 		E7526E3D1B67504200C6468F = {
 			isa = PBXGroup;
 			children = (
+				04A05EDC1B6F53490005B637 /* crmDelegate.h */,
+				04A05ED41B6F14EA0005B637 /* crmSoap.h */,
+				04A05ED51B6F14EA0005B637 /* crmSoap.m */,
+				04A05ED31B6F13FD0005B637 /* viewControllers */,
 				E7526E481B67504200C6468F /* CRM */,
 				E7526E651B67504200C6468F /* CRMTests */,
 				E7526E471B67504200C6468F /* Products */,
@@ -223,6 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7526E4F1B67504200C6468F /* AppDelegate.m in Sources */,
+				04A05ED21B6F13EB0005B637 /* loginViewController.m in Sources */,
+				04A05ED61B6F14EA0005B637 /* crmSoap.m in Sources */,
 				E7526E4C1B67504200C6468F /* main.m in Sources */,
 				E7526E551B67504200C6468F /* ViewController.m in Sources */,
 				E7526E521B67504200C6468F /* CRM.xcdatamodeld in Sources */,
