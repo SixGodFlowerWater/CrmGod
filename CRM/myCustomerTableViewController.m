@@ -12,8 +12,9 @@
 
 @interface myCustomerTableViewController ()
 @property(strong,nonatomic)crmSoap *soap;
-@property(strong,nonatomic)NSMutableArray *dataOfCustomer;
+@property(strong,nonatomic)NSMutableArray *dataOfCustomer;//包涵多条客户信息数据数组，每天数组是一个字典
 @property(strong,nonatomic)NSMutableDictionary *dataDic;
+@property(strong,nonatomic)UIAlertView *myalertview;
 @end
 
 @implementation myCustomerTableViewController
@@ -38,6 +39,7 @@
             [alertview show];
         }
     }
+    [self.myalertview dismissWithClickedButtonIndex:0 animated:YES];
     
 }
 -(void)doWhenHttpCollecttionFalil:(NSError *)error{
@@ -51,6 +53,8 @@
     softUser *localuser=[softUser sharedLocaluserUserByDictionary:nil];
     [_soap getCustomerNameAndIdByUserId:localuser.userId];
     
+    self.myalertview=[[UIAlertView alloc]initWithTitle:@"" message:@"正在加载...." delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    [self.myalertview show];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -58,21 +62,17 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
     return self.dataOfCustomer.count;
 }
@@ -87,10 +87,8 @@
     
     NSDictionary *dic=[self.dataOfCustomer objectAtIndex:indexPath.row];
     cell.textLabel.text=[dic objectForKey:@"Customer_Name"];
-    
-    
-    // Configure the cell...
-    
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+
     return cell;
 }
 
@@ -129,21 +127,21 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+//    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+//    
+//    // Pass the selected object to the new view controller.
+//    
+//    // Push the view controller.
+//    [self.navigationController pushViewController:detailViewController animated:YES];
 }
-*/
+
 
 /*
 #pragma mark - Navigation
