@@ -23,7 +23,7 @@
 @property (strong, nonatomic) NSURLConnection *conn;
 
 -(void)checkAccount:(NSString *)loginCount  Pwd:(NSString *)LooginPwd;//验证用户账号密码
-
+-(void)getUserInfoByUserIdAndUserPWd:(NSString *)userId Pwd:(NSString *)pwd;//通过账号密码获取用户信息
 
 
 @end

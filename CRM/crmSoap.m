@@ -38,12 +38,31 @@
     matchingElement = @"checkAccountResult";
     [self runWithsoapXml:soapMsg];
 }
-
+-(void)getUserInfoByUserIdAndUserPWd:(NSString *)userId Pwd:(NSString *)pwd
+{
+    NSString *soapMsg = [NSString stringWithFormat:
+                         @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
+                         "<soap12:Envelope "
+                         "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" "
+                         "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" "
+                         "xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">"
+                         "<soap12:Body>"
+                         
+                         "<getuserInfo xmlns=\"xaiohu/CRM\">"
+                         "<loginCount>%@</loginCount>"
+                         "<loginPwd>%@</loginPwd>"
+                         "</getuserInfo>"
+                         "</soap12:Body>"
+                         "</soap12:Envelope>",userId,pwd];
+    // 设置我们之后解析XML时用的关键字，与响应报文中Body标签之间的getMobileCodeInfoResult标签对应
+    matchingElement = @"getuserInfoResult";
+    [self runWithsoapXml:soapMsg];
+}
 
 -(void)runWithsoapXml:(NSString *)soapWithXml{
 
     NSString *soapMsg=soapWithXml;
-    NSLog(@"%s%@",__func__,soapMsg);
+//    NSLog(@"%s%@",__func__,soapMsg);
     // 将这个XML字符串打印出来
   //  NSLog(@"将这个XML字符串打印出来%@", soapMsg);
     // 创建URL，内容是前面的请求报文报文中第二行主机地址加上第一行URL字段
@@ -88,12 +107,12 @@
 
 // 完成接收数据时调用
 -(void) connectionDidFinishLoading:(NSURLConnection *) connection {
-    NSString *theXML = [[NSString alloc] initWithBytes:[webData mutableBytes]
-                                                length:[webData length]
-                                              encoding:NSUTF8StringEncoding];
-    
-    // 打印出得到的XML
-    NSLog(@"打印出得到的XML%@", theXML);
+//    NSString *theXML = [[NSString alloc] initWithBytes:[webData mutableBytes]
+//                                                length:[webData length]
+//                                              encoding:NSUTF8StringEncoding];
+//    
+//    // 打印出得到的XML
+//    NSLog(@"打印出得到的XML%@", theXML);
     // 使用NSXMLParser解析出我们想要的结果
     xmlParser = [[NSXMLParser alloc] initWithData: webData];
     [xmlParser setDelegate: self];

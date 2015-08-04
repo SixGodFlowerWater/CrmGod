@@ -7,16 +7,19 @@
 //
 
 #import "loginViewController.h"
+#import "softUser.h"
 
 @interface loginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userIdText;
 @property (weak, nonatomic) IBOutlet UITextField *userPwdText;
 @property(strong,nonatomic)crmSoap *soap;
 @property(strong,nonatomic)UIAlertView *myalrtview;
+
 @end
 
 @implementation loginViewController
-- (IBAction)loginIn:(id)sender {
+#pragma _mark BtnEventMothd
+- (IBAction)loginIn:(id)sender {//登录
     _soap=[[crmSoap alloc]init];
     _soap.soapDelgate=self;
     [_soap checkAccount:self.userIdText.text Pwd:self.userPwdText.text];
@@ -28,10 +31,27 @@
     if ([soapresult isEqualToString:@"成功"]) {
         [self performSegueWithIdentifier:@"signIn" sender:self];
         [self.myalrtview dismissWithClickedButtonIndex:0 animated:YES];
+        [self.soap getUserInfoByUserIdAndUserPWd:self.userIdText.text Pwd:self.userPwdText.text];
     }
     else{
-        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:nil message:@"登陆失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alertview show];
+        if ([soapresult isEqualToString:@"失败"]) {
+            UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:nil message:@"登陆失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alertview show];
+
+        }
+        else{
+            NSLog(@"soapresult %@",soapresult);
+            NSData *data=[soapresult dataUsingEncoding:NSUTF8StringEncoding];
+            NSError *error=nil;
+            NSMutableDictionary *userDic=(NSMutableDictionary *)[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+            
+            
+            NSLog(@"userdic%@",[userDic description]);
+            if (!error) {
+                softUser *Localuser=[softUser sharedLocaluserUserByDictionary:userDic];
+            }
+        }
+        
     }
     
 }
@@ -43,25 +63,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.userPwdText resignFirstResponder];
     [self.userIdText resignFirstResponder];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
