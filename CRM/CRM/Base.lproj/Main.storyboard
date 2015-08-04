@@ -165,13 +165,7 @@
                             <constraint firstItem="Nph-fC-2Vw" firstAttribute="bottom" secondItem="JMr-BP-aC8" secondAttribute="bottomMargin" id="tu1-Lk-Awf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="我的联系人" id="5gU-tc-OnU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cce-rV-epS">
-                            <connections>
-                                <segue destination="0do-Nr-gHE" kind="push" id="Uhb-Qh-9hP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="我的联系人" id="5gU-tc-OnU"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjy-Rk-hy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -520,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iba-xM-SQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2592" y="240"/>
+            <point key="canvasLocation" x="2626" y="312"/>
         </scene>
         <!--联系人名称-->
         <scene sceneID="RPz-uD-uLx">
