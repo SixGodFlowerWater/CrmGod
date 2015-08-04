@@ -506,14 +506,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UC7-Td-ymC">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UC7-Td-ymC">
                                 <rect key="frame" x="16" y="83" width="288" height="29"/>
                                 <segments>
                                     <segment title="跟进记录"/>
                                     <segment title="详细资料"/>
                                 </segments>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5xe-94-Ydr">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5xe-94-Ydr">
                                 <rect key="frame" x="0.0" y="119" width="320" height="363"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -526,7 +526,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j18-oL-L9X">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j18-oL-L9X">
                                 <rect key="frame" x="0.0" y="485" width="320" height="34"/>
                                 <color key="backgroundColor" red="0.55700332142289177" green="0.74814223907106192" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -605,10 +605,10 @@
             </objects>
             <point key="canvasLocation" x="3467" y="932"/>
         </scene>
-        <!--客户详细-->
+        <!--我的客户-->
         <scene sceneID="Epq-So-Epe">
             <objects>
-                <tableViewController id="CFo-5I-aMJ" sceneMemberID="viewController">
+                <tableViewController id="CFo-5I-aMJ" customClass="myCustomerTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sLy-tN-Vbp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -626,13 +626,13 @@
                             <outlet property="delegate" destination="CFo-5I-aMJ" id="hx9-fa-cJA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="客户详细" id="nof-DL-tOD">
+                    <navigationItem key="navigationItem" title="我的客户" id="nof-DL-tOD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zY6-a1-Ih2"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNE-Nf-Iwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="205"/>
+            <point key="canvasLocation" x="2115" y="181"/>
         </scene>
         <!--创建客户-->
         <scene sceneID="gCD-zs-GS3">
