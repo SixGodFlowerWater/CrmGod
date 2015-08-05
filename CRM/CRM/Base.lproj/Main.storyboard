@@ -965,7 +965,7 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="2592" y="60"/>
+            <point key="canvasLocation" x="2615" y="42"/>
         </scene>
         <!--联系人名称-->
         <scene sceneID="RPz-uD-uLx">
@@ -1796,7 +1796,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaP-bH-ER7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3006" y="95"/>
+            <point key="canvasLocation" x="3025" y="60"/>
         </scene>
     </scenes>
     <resources>
