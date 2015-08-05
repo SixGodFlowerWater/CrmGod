@@ -39,27 +39,6 @@
     [self runWithsoapXml:soapMsg];
 }
 
-
--(void)getContactNameAndIdByUserId:(NSString *)userid
-{
-    NSString *soapMsg = [NSString stringWithFormat:
-                         @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
-                         "<soap12:Envelope "
-                         "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" "
-                         "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" "
-                         "xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">"
-                         "<soap12:Body>"
-                         
-                         "<getCustomerNameByuserID xmlns=\"xaiohu/CRM\">"
-                         "<userId>%d</userId>"
-                         "</getCustomerNameByuserID>"
-                         "</soap12:Body>"
-                         "</soap12:Envelope>",userid.intValue];
-    // 设置我们之后解析XML时用的关键字，与响应报文中Body标签之间的getMobileCodeInfoResult标签对应
-    matchingElement = @"getContactNameByuserIDResult";
-    [self runWithsoapXml:soapMsg];
-}
-
 -(void)getCustomerNameAndIdByUserId:(NSString *)userid
 {
     NSString *soapMsg = [NSString stringWithFormat:

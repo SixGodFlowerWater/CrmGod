@@ -24,6 +24,6 @@
 
 -(void)checkAccount:(NSString *)loginCount  Pwd:(NSString *)LooginPwd;//验证用户账号密码
 -(void)getUserInfoByUserIdAndUserPWd:(NSString *)userId Pwd:(NSString *)pwd;//通过账号密码获取用户信息
--(void)getCustomerNameAndIdByUserId:(NSString *)userid;//通过id获取客户姓名和id
--(void)get
+-(void)getCustomerNameAndIdByUserId:(NSString *)userid;
+
 @end
