@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		044837931B7040A200FE78F3 /* softUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 044837921B7040A200FE78F3 /* softUser.m */; };
+		044A6CDD1B70F30000567754 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044A6CDC1B70F30000567754 /* ContactViewController.m */; };
 		04A05ED21B6F13EB0005B637 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A05ED11B6F13EB0005B637 /* loginViewController.m */; };
 		04A05ED61B6F14EA0005B637 /* crmSoap.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A05ED51B6F14EA0005B637 /* crmSoap.m */; };
 		04A605121B708FF000E4D572 /* myCustomerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A605101B708FF000E4D572 /* myCustomerTableViewController.m */; };
@@ -35,6 +36,8 @@
 /* Begin PBXFileReference section */
 		044837911B7040A200FE78F3 /* softUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = softUser.h; sourceTree = "<group>"; };
 		044837921B7040A200FE78F3 /* softUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = softUser.m; sourceTree = "<group>"; };
+		044A6CDB1B70F30000567754 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		044A6CDC1B70F30000567754 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
 		04A05ED01B6F13EB0005B637 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		04A05ED11B6F13EB0005B637 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		04A05ED41B6F14EA0005B637 /* crmSoap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crmSoap.h; sourceTree = "<group>"; };
@@ -77,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044A6CDA1B70F2D300567754 /* myContact */ = {
+			isa = PBXGroup;
+			children = (
+				044A6CDB1B70F30000567754 /* ContactViewController.h */,
+				044A6CDC1B70F30000567754 /* ContactViewController.m */,
+			);
+			name = myContact;
+			sourceTree = "<group>";
+		};
 		04A05ED31B6F13FD0005B637 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +101,7 @@
 		E7526E3D1B67504200C6468F = {
 			isa = PBXGroup;
 			children = (
+				044A6CDA1B70F2D300567754 /* myContact */,
 				04A6050F1B708FF000E4D572 /* myCustomerTableViewController.h */,
 				04A605101B708FF000E4D572 /* myCustomerTableViewController.m */,
 				04A605111B708FF000E4D572 /* myCustomerTableViewController.xib */,
@@ -260,6 +273,7 @@
 				04A605121B708FF000E4D572 /* myCustomerTableViewController.m in Sources */,
 				04A05ED21B6F13EB0005B637 /* loginViewController.m in Sources */,
 				04A05ED61B6F14EA0005B637 /* crmSoap.m in Sources */,
+				044A6CDD1B70F30000567754 /* ContactViewController.m in Sources */,
 				E7526E4C1B67504200C6468F /* main.m in Sources */,
 				044837931B7040A200FE78F3 /* softUser.m in Sources */,
 				E7526E551B67504200C6468F /* ViewController.m in Sources */,
